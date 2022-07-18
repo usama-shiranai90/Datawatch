@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+  --dark-800-color: #1A1A1A;
+  --dark-700-color: #1B1B1B;
+  --dark-600-color: #051923;
+  --dark-500-color: #212529;
+  --dark-400-color: #343A40;
+  --dark-300-color: #495057;
+  --dark-250-color: #6C757D;
+  --dark-200-color: #ADB5BD;
+  --dark-150-color: #CED4DA;
+  --dark-100-color: #DEE2E6;
+  --dark-50-color: #E9ECEF;
+  --dark-0-color: #F8F9FA;
+
+  --shaddy-400-color: #006466;
+  --shaddy-450-color: #006466;
+  --shaddy-500-color: #0B525B;
+  --shaddy-600-color: #144552;
+  --shaddy-700-color: #3B3E43;
+
+}
+
+/*Fonts being used in headers*/
+@font-face {
+  font-family: syne-Regular;
+  src: url(/Caltax/Datawatch/resources/font/syne/Syne-Regular.ttf);
+}
+
+@font-face {
+  font-family: syne-Medium;
+  src: url(/Caltax/Datawatch/resources/font/syne/Syne-Medium.ttf);
+}
+
+@font-face {
+  font-family: syne-Bold;
+  src: url(/Caltax/Datawatch/resources/font/syne/Syne-Bold.ttf);
+}
+
+/*work-section*/
+
+@tailwind utilities;
+
+
+.left-5 {
+  left: 5%;
+}
+
+.right-5 {
+  right: 5%;
+}
+
+.top-5 {
+  top: 5%;
+}
+
+.bottom-5 {
+  bottom: 5%;
+}
+
+.left-50 {
+  left: 50%;
+}
+
+.right-50 {
+  right: 50%;
+}
+
+.top-50 {
+  top: 50%;
+}
+
+.bottom-50 {
+  bottom: 50%;
+}
+
+.-z-1 {
+  z-index: -1;
+}
+
+[id] {
+  scroll-margin-top: 100px;
+}
