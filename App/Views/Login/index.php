@@ -267,7 +267,7 @@
             <div class="mt-4 sm:mt-0 sm:ml-3">
               <button type="submit"
                       class="block w-full rounded-md border border-transparent px-5 py-3 bg-dark-800 text-base font-medium text-dark-0 shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-dark-500 sm:px-10">
-                Notify me
+                Notify me!
               </button>
             </div>
           </form>
