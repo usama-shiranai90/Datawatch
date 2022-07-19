@@ -117,20 +117,47 @@
                 class="sm:max-w-2xl sm:w-full bg-dark-0 border border-dark-200 rounded-b-sm border-t-0 border-opacity-5 px-5 py-10">
             <div class="sm:flex sm:flex-col gap-3.5">
               <div class="flex flex-col gap-1.5">
-                <label for="admin-email" class="block text-sm font-medium text-gray-700">
+                <label for="admin-email" class="block text-sm font-medium text-dark-600">
                   Email address
                 </label>
-                <input id="admin-email" type="email"
-                       class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
-                       placeholder="Enter your email">
+
+                <div class="relative">
+                  <input id="admin-email" type="email"
+                         class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
+                         placeholder="Enter your email">
+                  <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-red-500" x-description="Heroicon name: solid/exclamation-circle"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <p class="text-sm text-red-600 text-center" id="email-error">Your email must be correct.</p>
+
               </div>
               <div class="flex flex-col gap-1.5">
-                <label for="admin-password" class="block text-sm font-medium text-gray-700">
+                <label for="admin-password" class="block text-sm font-medium text-dark-600">
                   Password
                 </label>
-                <input id="admin-password" type="password"
-                       class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
-                       placeholder="password">
+
+                <div class="relative">
+                  <input id="admin-password" type="password"
+                         class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
+                         placeholder="password">
+                  <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-red-500" x-description="Heroicon name: solid/exclamation-circle"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-sm text-red-600 text-center" id="email-error">Your password must be less than 4
+                  characters.</p>
               </div>
               <div class="flex items-center justify-end">
 
@@ -206,24 +233,24 @@
           </div>
 
           <div class="col-span-1 flex justify-center py-5 px-8 bg-gray-50 items-center">
-            <i class="text-6xl fill-current text-gray-700 devicon-bootstrap-plain-wordmark"></i>
+            <i class="text-6xl fill-current text-dark-600 devicon-bootstrap-plain-wordmark"></i>
           </div>
 
           <div class="col-span-1 flex justify-center py-5 px-8 bg-gray-50 items-center">
-            <i class="text-6xl fill-current text-gray-700 devicon-composer-line-wordmark colored"></i>
+            <i class="text-6xl fill-current text-dark-600 devicon-composer-line-wordmark colored"></i>
           </div>
 
           <div class="col-span-1 flex justify-center py-5 px-8 bg-gray-50 items-center">
-            <i class="text-6xl fill-current text-gray-700 devicon-java-plain-wordmark"></i>
+            <i class="text-6xl fill-current text-dark-600 devicon-java-plain-wordmark"></i>
           </div>
 
           <div class="col-span-1 flex justify-center py-5 px-8 bg-gray-50 items-center">
-            <i class="text-6xl fill-current text-gray-700 fill-current text-gray-600 devicon-javascript-plain"></i>
+            <i class="text-6xl fill-current text-dark-600 fill-current text-gray-600 devicon-javascript-plain"></i>
           </div>
 
           <div class="col-span-1 flex justify-center py-5 px-8 bg-gray-50 items-center">
 
-            <i class="text-6xl fill-current text-gray-700 devicon-php-plain"></i>
+            <i class="text-6xl fill-current text-dark-600 devicon-php-plain"></i>
 
           </div>
 

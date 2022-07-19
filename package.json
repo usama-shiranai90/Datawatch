@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@tailwindcss/forms": "^0.1.0",
     "autoprefixer": "^10.4.7",
     "postcss-import": "^14.1.0",
     "tailwindcss": "^2.2.19"

@@ -16,7 +16,7 @@ set_exception_handler('Core\Error::exceptionHandler');
 $router = new Core\Router();
 $router->add('', ['controller' => 'Login', 'action' => 'index']);
 //$router->add('{controller}/{action}');
-$router->add('{Dashboard}/{id:\d+}/{index}', 12);
+$router->add('{Summary}/{id:\d+}/{index}', 12);
 
 try {
   $router->dispatch($_SERVER['QUERY_STRING']);
