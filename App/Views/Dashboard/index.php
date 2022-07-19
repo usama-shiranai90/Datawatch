@@ -17,11 +17,10 @@
   <meta content="" property="og:image">
   <meta content="#fafafa" name="theme-color">
 
-  <link href="../resources/icon/favicon.ico" rel="icon" type="image/x-icon">
-  <link href="../resources/icon/favicon.ico" rel="apple-touch-icon" type="image/x-icon">
-  <link href="./asset/css/Tailwind.css" rel="stylesheet">
-  <!--  <link href="../resources/css/Tailwind.css" rel="stylesheet">-->
-  <link href="../resources/css/normalized.css" rel="stylesheet">
+  <link href="../../../resources/icon/favicon.ico" rel="icon" type="image/x-icon">
+  <link href="../../../resources/icon/favicon.ico" rel="apple-touch-icon" type="image/x-icon">
+  <link href="../../../public/asset/css/Tailwind.css" rel="stylesheet">
+  <link href="../../../resources/css/normalized.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
@@ -42,40 +41,33 @@
               <div class="flex-shrink-0">
                 <div class="flex flex-row gap-1 items-center">
                   <svg version="1.1" class="w-1/12" xmlns="http://www.w3.org/2000/svg"
-                       xmlns:xlink="http://www.w3.org/1999/xlink"
-                       x="0px" y="0px" viewBox="0 0 463 496.1" style="opacity: 1; transform: translateX(0px);"
-                       xml:space="preserve">
-      <linearGradient id="sh-grad" gradientUnits="userSpaceOnUse" x1="51.3661" y1="-6.9693" x2="411.6339" y2="353.2984">
-        <stop offset="3.656096e-04" style="stop-color:#17B9C8"></stop>
-        <stop offset="1" style="stop-color:#00527B"></stop>
-      </linearGradient>
+                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 463 496.1" style="opacity: 1; transform: translateX(0px);" xml:space="preserve">
+                    <linearGradient id="sh-grad" gradientUnits="userSpaceOnUse" x1="51.3661" y1="-6.9693" x2="411.6339" y2="353.2984">
+                      <stop offset="3.656096e-04" style="stop-color:#17B9C8"></stop>
+                      <stop offset="1" style="stop-color:#00527B"></stop>
+                    </linearGradient>
                     <path class="fill-current text-dark-400"
                           d="M463,127.2c0,168.9-96.3,313-231.5,368.8C96.3,440.3,0,296.2,0,127.2c0-32,3.5-63,10-92.8c26,12,54.6,18.7,84.5,18.7c51.8,0,99.5-19.9,137-53.1c37.5,33.2,85.2,53.1,137,53.1c30,0,58.5-6.6,84.5-18.7C459.5,64.2,463,95.3,463,127.2z"></path>
                     <path class="fill-current text-dark-0 opacity-60"
                           d="M231.5,60.8c-28.9,25.1-65.6,40.1-105.5,40.1c-23.1,0-45.1-5-65.1-14.1c-5,22.5-7.7,45.9-7.7,70.1c0,127.5,74.2,236.3,178.4,278.4"></path>
                     <path class="fill-current text-shaddy-400"
                           d="M231.5,60.8c28.9,25.1,65.6,40.1,105.5,40.1c23.1,0,45.1-5,65.1-14.1c5,22.5,7.7,45.9,7.7,70.1c0,127.5-74.2,236.3-178.4,278.4"></path>
-    </svg>
+                  </svg>
                   <h2 class="leading-tight tracking-tight text-xl font-semibold text-dark-0 my-2">Saim Raza Billing</h2>
                 </div>
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                     aria-current="page">Dashboard</a>
+                  <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
 
-                  <a href="#"
-                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
 
-                  <a href="#"
-                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
 
-                  <a href="#"
-                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
 
-                  <a href="#"
-                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
                 </div>
               </div>
             </div>
@@ -241,7 +233,8 @@
         integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script src="../resources/js/plugins.js"></script>
-<script src="../resources/js/main.js"></script>
+<script src="../../../resources/js/plugins.js"></script>
+<script src="../../../resources/js/main.js"></script>
+
 <!--<script defer src="./node_modules/alpinejs/dist/cdn.js"></script>-->
 </html>

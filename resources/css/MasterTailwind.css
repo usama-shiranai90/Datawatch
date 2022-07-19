@@ -26,17 +26,17 @@
 /*Fonts being used in headers*/
 @font-face {
   font-family: syne-Regular;
-  src: url(/Caltax/Datawatch/resources/font/syne/Syne-Regular.ttf);
+  src: url('../../../resources/font/syne/Syne-Regular.ttf');
 }
 
 @font-face {
   font-family: syne-Medium;
-  src: url(/Caltax/Datawatch/resources/font/syne/Syne-Medium.ttf);
+  src: url('../../../resources/font/syne/Syne-Medium.ttf');
 }
 
 @font-face {
   font-family: syne-Bold;
-  src: url(/Caltax/Datawatch/resources/font/syne/Syne-Bold.ttf);
+  src: url('../../../resources/font/syne/Syne-Bold.ttf');
 }
 
 /*work-section*/

@@ -1,4 +1,6 @@
 <?php
+$adminError = false;
+$employeeError = false;
 
 ?>
 <!doctype html>
@@ -17,18 +19,26 @@
   <meta content="" property="og:image">
   <meta content="#fafafa" name="theme-color">
 
-  <link href="./resources/icon/favicon.ico" rel="icon" type="image/x-icon">
-  <link href="./resources/icon/favicon.ico" rel="apple-touch-icon" type="image/x-icon">
-  <link href="./asset/css/Tailwind.css" rel="stylesheet">
-  <!--  <link href="../resources/css/Tailwind.css" rel="stylesheet">-->
-  <link href="./resources/css/normalized.css" rel="stylesheet">
+  <link href="../../../resources/icon/favicon.ico" rel="icon" type="image/x-icon">
+  <link href="../../../resources/icon/favicon.ico" rel="apple-touch-icon" type="image/x-icon">
+  <link href="../../../public/asset/css/Tailwind.css" rel="stylesheet">
+  <link href="../../../resources/css/normalized.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         referrerpolicy="no-referrer" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+          integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="../../../resources/js/authenticationScripts.js"></script>
   <!--    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+
+  <script>
+    setAdminErrorStatus(<?php json_encode($adminError); ?>)
+    setEmployeeErrorStatus(<?php json_encode($employeeError); ?>)
+  </script>
+
 </head>
 <body class="bg-dark-50">
 <main>
@@ -91,46 +101,59 @@
             <!--divide-y divide-gray-300 md:divide-y-0-->
             <ol class="flex items-center rounded-t-sm border border-dark-200 border-opacity-5">
 
-              <li id="adminPanelTabID"
-                  class="relative w-full inline-flex justify-center items-center py-3 rounded-t border-b-2 border-indigo-500 sm:px-6 sm:w-auto flex-grow cursor-pointer">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                     class="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-                Admin
+              <li class="w-1/2">
+                <button class="relative w-full bg-gray-200 font-semibold inline-flex justify-center items-center py-3 rounded-t border-b-2 border-indigo-500 sm:px-6
+                  flex-grow cursor-pointer transform transition ease-out duration-300" id="adminPanelTabID">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                       class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  Admin
+                </button>
               </li>
 
-              <li id="employeePanelTabID"
-                  class="w-full inline-flex justify-center items-center py-3 rounded-t border-b-2 border-transparent text-gray-400 font-semibold cursor-pointer sm:px-6 sm:w-auto transform transition ease-out duration-300 hover:scale-100 hover:text-black hover:border-black flex-grow">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                     class="w-5 h-5 mr-3" viewBox="0 0 24 24">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-                Employee
+              <li class="w-1/2">
+                <button id="employeePanelTabID" class="w-full inline-flex justify-center items-center py-3 rounded-t border-b-2 border-transparent text-gray-400 font-semibold cursor-pointer sm:px-6
+                transform transition ease-out duration-300 hover:text-black hover:border-black flex-grow">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                       class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  Employee
+                </button>
               </li>
             </ol>
           </nav>
 
-          <form method="post" autocomplete="on" autocapitalize="characters" name="authenticationPanel"
+          <form method="post" autocomplete="on" autocapitalize="characters" name="adminAuthenticationPanel"
                 class="sm:max-w-2xl sm:w-full bg-dark-0 border border-dark-200 rounded-b-sm border-t-0 border-opacity-5 px-5 py-10">
             <div class="sm:flex sm:flex-col gap-3.5">
+
+              <div class="bg-red-100 m-4 rounded grid grid-cols-12 items-center px-2 text-sm overflow-hidden hidden"
+                   id="adminError" style="max-height: 0">
+                <div class="col-span-2 sm:col-span-1 flex justify-center">
+                  <img src="../../../public/asset/image/exclamation-mark.png" style="width: 20px">
+                </div>
+                <label class="text-red-600 col-span-10 sm:col-span-11"></label>
+              </div>
+
               <div class="flex flex-col gap-1.5">
                 <label for="admin-email" class="block text-sm font-medium text-gray-700">
                   Email address
                 </label>
-                <input id="admin-email" type="email"
+                <input id="admin-email" type="email" name="adminEmail"
                        class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
                        placeholder="Enter your email">
               </div>
               <div class="flex flex-col gap-1.5">
                 <label for="admin-password" class="block text-sm font-medium text-gray-700">
-                  Password
+                  Admin Password
                 </label>
-                <input id="admin-password" type="password"
+                <input id="admin-password" type="password" name="adminPassword"
                        class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
-                       placeholder="password">
+                       placeholder="Password">
               </div>
               <div class="flex items-center justify-end">
 
@@ -141,7 +164,56 @@
                 </div>
               </div>
               <div class="mt-5 sm:mt-0 place-content-end place-self-end">
-                <button type="submit"
+                <button type="submit" name="adminLogin"
+                        class="block w-full rounded-md border border-transparent px-10 py-3 text-base font-medium text-dark-0 shadow sm:px-14 bg-dark-300 hover:bg-dark-400">
+                  Login
+                </button>
+              </div>
+            </div>
+          </form>
+
+
+          <form method="post" autocomplete="on" autocapitalize="characters" name="employeeAuthenticationPanel"
+                class="sm:max-w-2xl sm:w-full bg-dark-0 border border-dark-200 rounded-b-sm border-t-0 border-opacity-5 px-5 py-10 hidden">
+            <div class="sm:flex sm:flex-col gap-3.5">
+
+<!--              Employee Error-->
+
+              <div class="bg-red-100 m-4 rounded grid grid-cols-12 items-center px-2 text-sm overflow-hidden hidden"
+                   id="employeeError" style="max-height: 0">
+                <div class="col-span-2 sm:col-span-1 flex justify-center">
+                  <img src="../../../public/asset/image/exclamation-mark.png" style="width: 20px">
+                </div>
+                <label class="text-red-600 col-span-10 sm:col-span-11"></label>
+              </div>
+
+
+              <div class="flex flex-col gap-1.5">
+                <label for="employee-email" class="block text-sm font-medium text-gray-700">
+                  Email address
+                </label>
+                <input id="employee-email" type="email" name="employeeEmail"
+                       class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
+                       placeholder="Enter your email">
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label for="employee-password" class="block text-sm font-medium text-gray-700">
+                  Employee Password
+                </label>
+                <input id="employee-password" type="password" name="employeePassword"
+                       class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-dark-500 placeholder-gray-500 shadow-sm focus:border-dark-500 focus:ring-dark-500"
+                       placeholder="Password">
+              </div>
+              <div class="flex items-center justify-end">
+
+                <div class="text-sm">
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                    Forgot your password?
+                  </a>
+                </div>
+              </div>
+              <div class="mt-5 sm:mt-0 place-content-end place-self-end">
+                <button type="submit" name="employeeLogin"
                         class="block w-full rounded-md border border-transparent px-10 py-3 text-base font-medium text-dark-0 shadow sm:px-14 bg-dark-300 hover:bg-dark-400">
                   Login
                 </button>
@@ -173,7 +245,7 @@
         </div>
         <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
           <img class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
-               src="./asset/image/Business%20solution-pana.png" alt="">
+               src="../../public/asset/image/Business%20solution-pana.png" alt="">
         </div>
       </div>
     </div>
@@ -287,8 +359,8 @@
 
 </body>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script src="./resources/js/plugins.js"></script>
-<script src="./resources/js/main.js"></script>
-<script defer src="./node_modules/alpinejs/dist/cdn.js"></script>
+<script src="../../../resources/js/plugins.js"></script>
+<script src="../../../resources/js/main.js"></script>
+<script defer src="../../node_modules/alpinejs/dist/cdn.js"></script>
 
 </html>
