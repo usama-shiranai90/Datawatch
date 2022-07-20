@@ -14,7 +14,7 @@ class Login extends \Core\Controller
    */
     public function indexAction()
     {
-//      View::render('Login/index.php', ['name'    => 'bukhari']);
-        View::render('Administration/Summary/index.php', ['name'    => 'bukhari']);
+      //View::render('Login/index.php', ['name'    => 'bukhari']);
+        View::render('Employee/index.php', ['name'    => 'bukhari']);
     }
 }
