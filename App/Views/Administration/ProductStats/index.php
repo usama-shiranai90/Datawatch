@@ -106,18 +106,18 @@
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-dark-300 text-dark-0", Default: "text-dark-0 hover:bg-shaddy-500 hover:text-dark-0" -->
-                  <a href="#"
+                  <a href="dashboard"
                      class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium"
                      aria-current="page">Dashboard</a>
 
-                  <a href="#" class="bg-dark-300 text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Sales
+                  <a href="salesSummary" class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Sales
                     Summary</a>
 
-                  <a href="#"
-                     class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Project
+                  <a href="productState"
+                     class="bg-dark-300 text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Project
                     Status</a>
 
-                  <a href="#"
+                  <a href="uploadPage"
                      class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Upload</a>
 
                 </div>
@@ -234,7 +234,7 @@
     </nav>
     <header class="py-10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-dark-0">Sales Summary</h1>
+        <h1 class="text-3xl font-bold text-dark-0">Product Status Based On Employee</h1>
       </div>
     </header>
   </div>

@@ -39,6 +39,11 @@
   src: url(/Caltax/Datawatch/resources/font/syne/Syne-Bold.ttf);
 }
 
+[type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
+  box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--box-shadow, 0 0 #0000);
+  border-color: var(--dark-600-color);
+}
+
 .nav-tab {
   @apply px-3 py-2 rounded-md text-sm font-medium;
 }

@@ -59,11 +59,11 @@
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-dark-300 text-dark-0", Default: "text-dark-0 hover:bg-shaddy-500 hover:text-dark-0" -->
-                  <a href="#" class="nav-tab tab" aria-current="page">Dashboard</a>
-                  <a href="#" class="nav-tab selected-tab">Product Submission</a>
-                  <a href="#" class="nav-tab tab">Request Page</a>
-                  <a href="#" class="nav-tab tab">Server Pages</a>
-
+                  <a href="db" class="nav-tab tab" aria-current="page">Dashboard</a>
+                  <a href="submission" class="nav-tab selected-tab">Product Submission</a>
+                  <a href="requestDesign" class="nav-tab tab">Request Page</a>
+                  <a href="designList" class="nav-tab tab">Server Pages</a>
+                  <a href="status" class="nav-tab tab">Product Status</a>
                 </div>
               </div>
             </div>
@@ -142,22 +142,11 @@
       <div x-show="isMobileOpen"
            class="border-b border-gray-700 md:hidden" id="mobile-menu">
         <div class="px-2 py-3 space-y-1 sm:px-3">
-          <!-- Current: "bg-dark-300 text-dark-0", Default: "text-dark-0 hover:bg-shaddy-500 hover:text-dark-0" -->
-          <a href="#" class="bg-dark-300 text-dark-0 block px-3 py-2 rounded-md text-base font-medium"
-             aria-current="page">Dashboard</a>
-
-          <a href="#"
-             class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 block px-3 py-2 rounded-md text-base font-medium">Product
-            Submission</a>
-
-          <a href="#"
-             class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 block px-3 py-2 rounded-md text-base font-medium">Request
-            Page</a>
-
-          <a href="#"
-             class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 block px-3 py-2 rounded-md text-base font-medium">Server
-            Pages</a>
-
+          <a href="db" class="nav-tab tab" aria-current="page">Dashboard</a>
+          <a href="submission" class="nav-tab selected-tab">Product Submission</a>
+          <a href="requestDesign" class="nav-tab tab">Request Page</a>
+          <a href="designList" class="nav-tab tab">Server Pages</a>
+          <a href="status" class="nav-tab tab">Product Status</a>
         </div>
         <div class="pt-4 pb-3 border-t border-gray-700">
           <div class="flex items-center px-5">
@@ -216,10 +205,11 @@
                       </div>
                     </div>
 
+                    <!--                    -->
                     <div class="sm:col-span-3">
                       <label for="product-list" class="block text-sm font-medium text-dark-600">Product List</label>
-                      <select id="product-list" name="product" class="block border w-full border-gray-300 rounded-md px-4 py-2 text-base text-dark-500
-                        placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
+                      <select id="product-list" name="productName"
+                              class="block border w-full rounded-md px-4 py-2 text-base placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
@@ -229,77 +219,70 @@
                     <div class="sm:col-span-3">
                       <label for="product-payment-type" class="block text-sm font-medium text-dark-600">Payment
                         Method</label>
-                      <select id="product-payment-type" name="paymentType" class="block border w-full border-gray-300 rounded-md px-4 py-2 text-base text-dark-500
-                        placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
+                      <select id="product-payment-type" name="paymentType"
+                              class="block border w-full rounded-md px-4 py-2 text-base placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
                         <option value="01">SMTP</option>
                         <option value="02">Bitcoin</option>
                       </select>
                     </div>
 
                     <div class="sm:col-span-3">
-                      <label for="username" class="block text-sm font-medium text-blue-gray-900">Product Price</label>
+                      <label for="product-price" class="block text-sm font-medium text-dark-600">Product
+                        Price</label>
                       <div class="mt-1 flex rounded-md shadow-sm">
                         <span
                           class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-dark-300 bg-dark-300 text-dark-0 sm:text-sm">
                           $
                         </span>
-                        <input type="text" name="username" id="username" autocomplete="username" value="lisamarie"
-                               class="flex-1 block w-full min-w-0 border-dark-300 rounded-none rounded-r-md text-blue-gray-900 sm:text-sm focus:ring-blue-500 focus:border-blue-500">
+                        <input type="text" name="productPrice" id="product-price"
+                               class="flex-1 block border w-full rounded-none rounded-r-md px-4 py-2 text-base placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
                       </div>
                     </div>
 
                     <div class="sm:col-span-3">
                       <label for="product-investment" class="block text-sm font-medium text-dark-600">Product
                         Investment</label>
-
-
                       <div class="mt-1 flex rounded-md shadow-sm">
-                      <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-dark-300 bg-dark-300 text-dark-0 sm:text-sm">
+                      <span
+                        class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-dark-300 bg-dark-300 text-dark-0 sm:text-sm">
                           $
                         </span>
-                        <input type="text" name="username" id="product-investment" autocomplete="username" value=""
-                               class="flex-1 block border w-full border-gray-300 rounded-none rounded-r-md px-4 py-2 text-base text-dark-500 placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
-
+                        <input type="text" name="productInvestment" id="product-investment" value=""
+                               class="flex-1 block border w-full rounded-none rounded-r-md px-4 py-2 text-base placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
                       </div>
 
 
                     </div>
 
+                    <div class="sm:col-span-3">
+                      <label for="submission-date" class="block text-sm font-medium text-dark-600">
+                        Date
+                      </label>
+                      <input type="date" name="productDate" id="submission-date"
+                             class="mt-1 block border w-full rounded-md px-4 py-2 text-base placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500">
+                    </div>
 
-                    <div class="sm:col-span-6">
-                      <label for="description" class="block text-sm font-medium text-blue-gray-900">
+                    <div class="sm:col-span-3">
+                      <label for="product-description" class="block text-sm font-medium text-dark-600">
                         Description
                       </label>
                       <div class="mt-1">
-                        <textarea id="description" name="description" rows="4"
-                                  class="block w-full border border-dark-300 rounded-md shadow-sm sm:text-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        <textarea id="product-description" name="description" rows="4"
+                                  class="block border w-full rounded-md px-4 py-2 text-base placeholder-shaddy-400 shadow-sm focus:border-dark-500 focus:ring-dark-500"></textarea>
                       </div>
                     </div>
 
-                    <div class="sm:col-span-3">
-                      <label for="country" class="block text-sm font-medium text-blue-gray-900">
-                        Country
-                      </label>
-                      <select id="country" name="country" autocomplete="country-name"
-                              class="mt-1 block w-full border-dark-300 rounded-md shadow-sm text-blue-gray-900 sm:text-sm focus:ring-blue-500 focus:border-blue-500">
-                        <option></option>
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
-                      </select>
-                    </div>
-
-                    <div class="sm:col-span-3">
-                      <label for="language" class="block text-sm font-medium text-blue-gray-900">
-                        Language
-                      </label>
-                      <input type="text" name="language" id="language"
-                             class="mt-1 block w-full border-dark-300 rounded-md shadow-sm text-blue-gray-900 sm:text-sm focus:ring-blue-500 focus:border-blue-500">
-                    </div>
 
                     <div class="mt-5 sm:col-span-6 sm:mt-0 place-content-end place-self-end">
-                      <button type="submit"
-                              class="block w-full rounded-md border border-transparent px-10 py-3 text-base font-medium text-dark-0 shadow sm:px-14 bg-dark-300 hover:bg-dark-400">
+                      <!--                      block w-full rounded-md border border-transparent px-10 py-3 text-base font-medium text-dark-0 shadow sm:px-14 bg-dark-300 hover:bg-dark-400-->
+                      <button type="submit" class="inline-flex items-center px-5 py-2 border border-gray-300 rounded-md shadow-sm text-sm
+                               font-medium leading-4 text-white transition duration-300 ease-linear bg-dark-300 shadow-sm hover:bg-gray-50 hover:bg-dark-500 hover:text-dark-0">
+                        <svg class="-ml-1 mr-2 h-5 w-5 text-gray-400"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                             aria-hidden="true">
+                          <path
+                            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
+                        </svg>
                         Submit
                       </button>
                     </div>

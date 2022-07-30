@@ -25,7 +25,7 @@ class Router
    *
    * @return void
    */
-  public function add($route, $params = [])
+  public function add(string $route, $params = [])
   {
     // Convert the route to a regular expression: escape forward slashes
     $route = preg_replace('/\//', '\\/', $route);

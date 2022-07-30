@@ -142,6 +142,15 @@ small {
   font-size: 80%;
 }
 
+[type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --ring-offset-shadow: 0 0 0 var(12px, 0) var(12px, #fff);
+  --ring-shadow: 0 0 0 calc(1px + var(12px, 0px)) var(12px, var(--dark-600-color));
+  box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--box-shadow, 0 0 #0000);
+  border-color: var(--dark-600-color);
+}
+
 button, input, optgroup, select, textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */

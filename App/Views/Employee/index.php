@@ -59,21 +59,11 @@
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-dark-300 text-dark-0", Default: "text-gray-300 hover:bg-shaddy-500 hover:text-dark-0" -->
-                  <a href="#" class="bg-dark-300 text-dark-0 px-3 py-2 rounded-md text-sm font-medium"
-                     aria-current="page">Dashboard</a>
-
-                  <a href="#"
-                     class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Product
-                    Submission</a>
-
-                  <a href="#"
-                     class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Request
-                    Page</a>
-
-                  <a href="#"
-                     class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Server
-                    Pages</a>
-
+                  <a href="db" class="nav-tab selected-tab" aria-current="page">Dashboard</a>
+                  <a href="submission" class="nav-tab tab">Product Submission</a>
+                  <a href="requestDesign" class="nav-tab tab">Request Page</a>
+                  <a href="designList" class="nav-tab tab">Server Pages</a>
+                  <a href="status" class="nav-tab tab">Product Status</a>
                 </div>
               </div>
             </div>
@@ -377,7 +367,9 @@
 </div>
 
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.0/cdn.js" integrity="sha512-he/Dr0VcSDmO6nVoy73f3clLnvpyqWmhju0ZuzbTIqUhMs3QIhbY7fL2GIVQJntQbXZz++NrXXJgLeaq62awIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.0/cdn.js"
+        integrity="sha512-he/Dr0VcSDmO6nVoy73f3clLnvpyqWmhju0ZuzbTIqUhMs3QIhbY7fL2GIVQJntQbXZz++NrXXJgLeaq62awIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 <script async src="https://www.google-analytics.com/analytics.js"></script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>

@@ -58,18 +58,18 @@
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-dark-300 text-dark-0", Default: "text-gray-300 hover:bg-shaddy-500 hover:text-dark-0" -->
-                  <a href="#" class="bg-dark-300 text-dark-0 px-3 py-2 rounded-md text-sm font-medium"
+                  <a href="dashboard" class="bg-dark-300 text-dark-0 px-3 py-2 rounded-md text-sm font-medium"
                      aria-current="page">Dashboard</a>
 
-                  <a href="#"
+                  <a href="salesSummary"
                      class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Sales
                     Summary</a>
 
-                  <a href="#"
+                  <a href="productState"
                      class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Project
                     Status</a>
 
-                  <a href="#"
+                  <a href="uploadPage"
                      class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Upload</a>
 
                 </div>
