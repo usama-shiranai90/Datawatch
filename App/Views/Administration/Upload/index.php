@@ -56,7 +56,7 @@
                 </div>
               </div>
               <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-4">
+                <div class="flex items-baseline space-x-2">
                   <!-- Current: "bg-dark-300 text-dark-0", Default: "text-gray-300 hover:bg-shaddy-500 hover:text-dark-0" -->
                   <a href="dashboard"
                      class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 px-3 py-2 rounded-md text-sm font-medium"
@@ -71,7 +71,7 @@
                     Status</a>
 
                   <a href="uploadPage"
-                     class="bg-dark-300 text-dark-0 px-3 py-2 rounded-md text-sm font-medium">Upload</a>
+                     class="nav-tab selected-tab">Upload</a>
 
                 </div>
               </div>

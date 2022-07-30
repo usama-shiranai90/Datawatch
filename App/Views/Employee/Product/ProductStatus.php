@@ -57,7 +57,7 @@
                 </div>
               </div>
               <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-4">
+                <div class="flex items-baseline space-x-2">
                   <a href="db" class="nav-tab tab" aria-current="page">Dashboard</a>
                   <a href="submission" class="nav-tab tab">Product Submission</a>
                   <a href="requestDesign" class="nav-tab tab">Request Page</a>
@@ -142,20 +142,15 @@
            class="border-b border-gray-700 md:hidden" id="mobile-menu">
         <div class="px-2 py-3 space-y-1 sm:px-3">
           <!-- Current: "bg-dark-300 text-dark-0", Default: "text-dark-0 hover:bg-shaddy-500 hover:text-dark-0" -->
-          <a href="#" class="bg-dark-300 text-dark-0 block px-3 py-2 rounded-md text-base font-medium"
-             aria-current="page">Dashboard</a>
-
-          <a href="#"
-             class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 block px-3 py-2 rounded-md text-base font-medium">Product
-            Submission</a>
-
-          <a href="#"
-             class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 block px-3 py-2 rounded-md text-base font-medium">Request
-            Page</a>
-
-          <a href="#"
-             class="text-dark-0 hover:bg-shaddy-500 hover:text-dark-0 block px-3 py-2 rounded-md text-base font-medium">Server
-            Pages</a>
+          <a href="db" class="bg-dark-300 text-dark-0 block nav-tab text-base" aria-current="page">Dashboard</a>
+          <a href="submission"
+             class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 block nav-tab text-base">Product Submission</a>
+          <a href="requestDesign"
+             class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 block nav-tab text-base">Request Page</a>
+          <a href="designList"
+             class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 block nav-tab text-base">Server Pages</a>
+          <a href="status"
+             class="text-gray-300 hover:bg-shaddy-500 hover:text-dark-0 block nav-tab text-base">Product Status</a>
 
         </div>
         <div class="pt-4 pb-3 border-t border-gray-700">
@@ -174,14 +169,14 @@
           </div>
           <div class="mt-3 px-2 space-y-1">
             <a href="#"
-               class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-dark-0 hover:bg-shaddy-500">Your
+               class="block nav-tab text-base text-gray-400 hover:text-dark-0 hover:bg-shaddy-500">Your
               Profile</a>
 
             <a href="#"
-               class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-dark-0 hover:bg-shaddy-500">Settings</a>
+               class="block nav-tab text-base text-gray-400 hover:text-dark-0 hover:bg-shaddy-500">Settings</a>
 
             <a href="#"
-               class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-dark-0 hover:bg-shaddy-500">Sign
+               class="block nav-tab text-base text-gray-400 hover:text-dark-0 hover:bg-shaddy-500">Sign
               out</a>
           </div>
         </div>
