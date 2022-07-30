@@ -28,49 +28,6 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         referrerpolicy="no-referrer" rel="stylesheet"/>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
-          integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <style>
-
-    select {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 20 20" fill="none" stroke="currentColor">  <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </svg>') no-repeat;
-      background-position-x: 95%;
-      background-position-y: 8px;
-      border: 1px solid #dfdfdf;
-
-    }
-
-
-    /* Arrow */
-    select::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0 1em;
-      background: var(--dark-400-color);
-      cursor: pointer;
-      pointer-events: none;
-      -webkit-transition: .25s all ease;
-      -o-transition: .25s all ease;
-      transition: .25s all ease;
-    }
-
-    /* Transition */
-    select:hover::after {
-      color: var(--dark-700-color);
-    }
-
-    select::-ms-expand {
-      display: none;
-    }
-
-  </style>
-
 </head>
 <body class="bg-dark-50">
 <div class="min-h-full">

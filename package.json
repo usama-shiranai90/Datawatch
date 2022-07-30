@@ -9,7 +9,7 @@
     "tailwindcss": "^2.2.19"
   },
   "scripts": {
-    "build-tailwind-css": "tailwindcss build -i resources/css/MasterTailwind.css -o App/view/asset/css/Tailwind.css",
+    "build-tailwind-css": "tailwindcss build -i resources/css/MasterTailwind.css -o public/asset/css/Tailwind.css",
     "master-watcher": "tailwindcss build -i resources/css/MasterTailwind.css -o App/view/asset/css/Tailwind.css --watch"
   },
   "keywords": [],
